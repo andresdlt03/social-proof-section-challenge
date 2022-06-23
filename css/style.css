@@ -54,7 +54,7 @@ body {
         align-items: center;
     }
 
-    .attribution {
+    footer {
         grid-column: 1/3;
     }
 }
@@ -187,14 +187,17 @@ body {
     letter-spacing: .075rem;
 }
 
+.testimony__name,
+.testimony__status {
+    font-weight: 400;
+}
+
 .testimony__name {
     color: var(--white);
-    font-weight: 400;
 }
 
 .testimony__status {
     color: var(--soft-pink);
-    font-weight: 400;
 }
 
 .testimony__text {
