@@ -21,6 +21,15 @@ html {
     background-repeat: no-repeat;
 }
 
+@media (min-width: 400px) {
+    html {
+        background: url(/images/bg-pattern-top-desktop.svg),
+        url(/images/bg-pattern-bottom-desktop.svg);
+        background-position: 0 0, 10vh 30vh;
+        background-repeat: no-repeat;
+    }
+}
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -31,15 +40,34 @@ body {
     margin: 8.5rem 2.2rem;
 }
 
+@media (min-width: 400px) {
+    body {
+        margin: 15rem 2.2rem;
+    }
+
+    .container {
+        max-width: 109rem;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        align-items: center;
+    }
+
+    .attribution {
+        grid-column: 1/3;
+    }
+}
+
 /* Header */
 
 .header {
     margin-bottom: 3.5rem;
+    text-align: center;
 }
 
 .header__container__title {
-    margin: 0 auto;
-    width: 25rem;
+    max-width: 25rem;
 }
 
 .header__title {
@@ -56,6 +84,24 @@ body {
     text-align: center;
     font-size: 1.8rem;
     font-weight: 400;
+}
+
+@media (min-width: 400px) {
+    .header__title,
+    .header__text {
+        text-align: start;
+    }
+
+    .header__title {
+        font-size: 5rem;
+        line-height: 4rem;
+        max-width: 35rem;
+        margin-top: 0;
+    }
+
+    .header__text {
+        max-width: 45rem;
+    }
 }
 
 /* Ratings */
@@ -84,6 +130,39 @@ body {
     color: var(--very-dark-magenta);
     font-weight: 700;
     letter-spacing: .05rem;
+}
+
+@media (min-width: 400px) {
+    .ratings {
+        margin-bottom: 7rem;
+        gap: 1.5rem;
+    }
+
+    .rate {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        max-width: 44.5rem;
+        height: 5.5rem;
+        padding: 1.4rem 4rem;
+    }
+
+    .stars,
+    .rate p {
+        margin: 0;
+    }
+
+    .stars {
+        display: flex;
+        gap: .75rem;
+    }
+
+    .rate:nth-child(2) {
+        margin-left: 5rem;
+    }
+
+    .rate:last-child {
+        margin-left: 10rem;
+    }
 }
 
 /* Testimonials */
@@ -133,4 +212,26 @@ body {
 
 .testimonials {
     margin-bottom: 2rem;
+}
+
+@media (min-width: 400px) {
+    .testimonials {
+        grid-column: 1 / 3;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .testimony {
+        max-width: 35rem;
+        max-height: 23.5rem;
+        padding: 3.5rem 4rem 4rem 3rem;
+    }
+
+    .testimony:nth-child(2) {
+        margin-top: 1.5rem;
+    }
+
+    .testimony:last-child {
+        margin-top: 3rem;
+    }
 }
